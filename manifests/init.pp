@@ -81,9 +81,8 @@ class lithnetamagent (
         }
       fail("Current os.release.major is ${::facts['os']['release']['major']} and must be 15")
     }
-
+    }
     # If we've ended up here, then this module doesn't currently support the OS
     default : { fail("Unsupported OS ${facts['os']['family']}.") }
-  }
 }
 }
